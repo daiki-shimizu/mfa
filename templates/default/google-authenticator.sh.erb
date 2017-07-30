@@ -1,0 +1,10 @@
+#!/bin/sh
+
+trap 'exit' SIGINT
+
+if [[ "<%= @user_names.join(' ') %>" =~ ([[:space:]]|^)$USER([[:space:]]|$) ]]; then
+  if [ ! -f "$HOME/.google_authenticator" ]; then
+    echo "Generating a secret key for google-authenticator"
+    /usr/local/bin/google-authenticator -t -d -W -u -f
+  fi
+fi

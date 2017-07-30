@@ -1,0 +1,6 @@
+include_recipe 'mfa::install_package'
+include_recipe 'mfa::install_google_authenticator'
+include_recipe 'mfa::create_google_authenticator_profile'
+include_recipe 'mfa::update_sshd_config'
+include_recipe 'mfa::create_PAM_google_authenticator'
+include_recipe 'mfa::update_PAM_sshd'
