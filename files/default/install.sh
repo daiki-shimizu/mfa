@@ -1,8 +1,6 @@
-if [ ! -d google-authenticator-libpam-master ]; then
-  wget https://github.com/google/google-authenticator-libpam/archive/master.zip
-  unzip master.zip
-  rm -f master.zip
-  cd google-authenticator-libpam-master
+if [ ! -d google-authenticator-libpam ]; then
+  git clone https://github.com/google/google-authenticator-libpam.git
+  cd google-authenticator-libpam
   ./bootstrap.sh
   ./configure
   make
