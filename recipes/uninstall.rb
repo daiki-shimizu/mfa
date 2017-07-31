@@ -1,7 +1,2 @@
-include_recipe 'mfa::restore_PAM_sshd'
-include_recipe 'mfa::delete_PAM_google_authenticator'
-include_recipe 'mfa::restore_sshd_config'
-include_recipe 'mfa::delete_google_authenticator_profile'
-include_recipe 'mfa::delete_google_authenticator_secret_key'
-include_recipe 'mfa::uninstall_google_authenticator'
+include_recipe 'mfa::cleanup'
 include_recipe 'mfa::uninstall_package'
