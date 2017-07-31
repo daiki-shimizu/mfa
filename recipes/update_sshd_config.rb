@@ -1,3 +1,5 @@
+Chef::Resource.include UserName
+
 file 'backup /etc/ssh/sshd_config' do
   path '/etc/ssh/sshd_config.backup'
   content IO.read('/etc/ssh/sshd_config')
